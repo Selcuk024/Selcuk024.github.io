@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Home</title>
+    <link rel="icon" href="images/home.png" type="image/icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link href="dist/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+</head>
+
+
+<body class="home">
+    
+    <nav id="navigation">
+        <div class="menu-container2">
+        <div class="menu-container">
+            <a href="index.html" class="nav-buttons">Home</a>
+            <a href="work.html" class="nav-buttons">My Work</a>
+            <a href="about.html" class="nav-buttons"> About Me </a>
+            <a href="contact.html" class="nav-contact-button"> Contact Now</a>  
+        </div>
+    </div>
+        
+    </nav>
+       <!-- start background animations mouse sjizzel -->
+    <canvas></canvas>
+    
+    <nav>
+
+        <div class="nav-container">
+            <img src="images/logo.png" class="nav-logo">
+            <div class="nav-container2">
+                <a href="index.html" class="nav-buttons">Home</a>
+                <a href="work.html" class="nav-buttons">My Work</a>
+                <a href="about.html" class="nav-buttons"> About Me </a>
+                <a href="contact.html" class="nav-contact-button"> Contact Now!</a>
+            </div>
+            <a href="javascript:void(0);" onclick="closeopen()">
+            <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </a>
+        </div>
+        
+    </nav>
+    <div class="home-container-main">
+    <div class="home-container">
+        <div class="home-container2">
+            <h1>I Create</h1>
+            <h1 class="h1-bg">Eye Catching</h1>
+        </div>
+        <div class="home-container3">
+            <h1>Websites!</h1>
+        </div>
+        <p class="home-text">
+            While The First Impression Counts,<br>
+            I Don’t Only Create Eye Catching Websites<br>
+            But Also One That Works Perfectly!
+        </p>
+        <button class="home-big-button"><a href="contact.html">Request A Website Right Now!</a></button>
+    </div>
+    <div class="home-container">
+        <img src="images/logo.png" class="home-logo">
+    </div>
+    </div>
+
+    <script src="javascript/hamburger-menu.js"></script>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/menu.js"></script>
+</body>
+</html>
