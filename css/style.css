@@ -417,7 +417,7 @@
     }
     .submit{
         height: 56px;
-
+       
         margin-bottom: 50px;
         padding-left: 18px;
         padding-right: 18px;
@@ -426,7 +426,8 @@
         font-size: 18px;
         border: none;
         background-color: #FFFF33;
-        box-shadow: 10px 9px #8B8000;
+        -webkit-appearance: none;
+        -webkit-box-shadow: 10px 9px #8B8000;
         transition-duration: 0.2s;
 
     }
