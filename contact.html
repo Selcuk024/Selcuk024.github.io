@@ -24,7 +24,9 @@
     </nav> 
     <nav id="navbar">
         <div class="nav-container">
-            <img src="images/logo.png" class="nav-logo" />
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.png" class="href-logo" />
+            </a>
             <div class="nav-container2">
               <a href="index.html" class="nav-buttons">Home</a>
               <a href="work.html" class="nav-buttons">My Work</a>
@@ -115,15 +117,17 @@
     </div>
     <div class="home-container-main reverse">
         <div class="contact-container">
-            <form>
-                <label for="name" class="contact-text3">Your Name</label><br>
-                <input type="text" class="field" name="name"><br>
-                <label for="mail" class="contact-text3">Your E-Mail</label><br>
-                <input type="email" class="field" name="mail"><br><br>
-                <label for="phone" class="contact-text3">Phone Number</label>
-                <input type="number" class="field" name="phone">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="0132a8ec-084e-4641-89d4-702df4f60b25">
+
+                <label for="name" class="contact-text3">Name</label><br>
+                <input type="text" class="field" name="name" required><br>
+                <label for="mail" class="contact-text3">E-mail</label><br>
+                <input type="email" class="field" name="mail" required><br><br>
+                <label for="phone" class="contact-text3">Phone number</label>
+                <input type="number" class="field" name="phone" required>
                 <label for="message" class="contact-text3">Message</label>
-                <textarea class="field-big"></textarea>
+                <textarea class="field-big" name="message"  required></textarea>
                 <input type="submit" class="submit" value="Submit">
             </form> 
         </div>
