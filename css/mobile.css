@@ -52,15 +52,15 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-
-        height: 70vh;
-
+        align-items: flex-start;
+        height: 90vh;
+        
         z-index: 1;
 
     }
     .home-container{
         width: 100%;
-        
+
     }
     .home-logo{
         display: none;
@@ -68,20 +68,20 @@
     h1{
         width: 100px;
         font-size: 24px;
-        margin-left: 24px;
+        margin-left: 12px;
 
         z-index: 1;
     }
     .h1-bg{
-        width: 160px;
-        height: 25px;
+        width: auto;
+        height: auto;
         
         margin-left: 0px;
 
         z-index: 1;
     }
     .home-text{
-        margin-left: 24px;
+        margin-left: 12px;
         font-size: 16px;
 
         
@@ -93,7 +93,7 @@
         width: 270px;
         height: 40px;
         
-        margin-left: 24px;
+        margin-left: 12px;
 
         z-index: 1;
     }
@@ -145,10 +145,10 @@
     }
     .aboutt-bg{
         font-size: 16px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 4px;
-        padding-top: 4px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 2px;
+        padding-top: 2px;
     }
     .about-big-button{
         width: 225px;
@@ -163,9 +163,7 @@
     .contact-big-text{
         font-size: 36px;
     }
-    .home-container-main{
-        height: 90vh;
-    }
+
     form{
         width: 90%;
         height: 400px;
@@ -189,7 +187,7 @@
     }
     .content{
         z-index: 1;
-        position: absolute;
+        position: relative;
     }
     /* work */
     .mobile-work-text{
@@ -204,6 +202,7 @@
         opacity: 1 !important;
         transform: translate(0) scale(1) !important;
 
+        font-size: 1rem;
         margin-top: 5px;
         margin-bottom: 24px;
     }
@@ -212,7 +211,7 @@
         justify-content: unset;
     }
     .work-container-mobile{
-        height: 150px;
+        height: auto;
         justify-content: unset;
     }
     .work-bg{
@@ -221,12 +220,45 @@
         padding-bottom: 8px;
         padding-top: 8px;
     }
+    .mobile-row{
+        flex-direction: column;
+        transform: translate(0) scale(1) !important;
+        opacity: 1 !important;
+
+    }
+    .hide{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+    .mobile-row img{
+        order: -1;
+    }
+    .mobile-app-image{
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .game-image{
+        width: 75%;
+    }
+    .mb-bg{
+        font-size: 20px;
+        width: 13rem;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        margin-top: 56px;
+    }
+    .work-container3{
+        height: auto;
+    }
     .yellow-bg{
         font-size: 26px;
         width: 180px;
         padding-bottom: 8px;
         padding-top: 8px;
     }
+
     .bold{
         font-weight: bold;
         display: block;
@@ -247,7 +279,7 @@
     }
     .work-button{
         font-size: 16px;
-        width: 235px;
+        width: 75%;
         height: 45px;
         margin-top: 40px;
         opacity: 1 !important;
