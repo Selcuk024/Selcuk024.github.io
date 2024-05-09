@@ -151,7 +151,11 @@ h1{
     z-index: 99;
 }
 .home-big-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 56px;
+    width: 65%;
     margin-left: 56px;
     margin-top: 24px;
     padding-left: 12px;
@@ -160,6 +164,7 @@ h1{
     font-size: 18px;
     border: none;
     background-color: #FFFF33;
+    color: #000;
     box-shadow: 10px 9px #8B8000;
     transition-duration: 0.2s;
     position: relative;
@@ -168,6 +173,9 @@ h1{
 .home-big-button:hover{
     transform: translateY(4px);
     box-shadow: none;
+}
+.work-container-mini{
+    display: none;
 }
 .home-logo{
     width: 55%;
@@ -358,6 +366,7 @@ h2{
     border: solid #FFFFFF 2px;
     font-size: 26px;
     color: #FFFFFF;
+    border-radius: 0px;
     margin-bottom: 26px;
 }
 .field-big{
@@ -377,6 +386,8 @@ h2{
     font-weight: 600;
     font-size: 18px;
     border: none;
+    border-radius: 0px;
+    color: #000;
     background-color: #FFFF33;
     box-shadow: 10px 9px #8B8000;
     transition-duration: 0.2s;
@@ -470,7 +481,7 @@ input[type=number] {
     padding-left: 12px;
     padding-right: 12px;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 22px;
     border: none;
     background-color: #FFFF33;
     box-shadow: 10px 9px #8B8000;
