@@ -167,6 +167,13 @@
     }
     .contact-container-big{
         width: 90%;
+        height: 50%;
+    }
+    .contact-container-big2{
+        width: 90%;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
     }
     .field{
         width: 90%;
