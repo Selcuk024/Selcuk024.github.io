@@ -39,6 +39,9 @@
         margin-bottom: 24px;
         z-index: 30;
     }
+    .containerWithMargin{
+        display: none;
+    }
     .nav-contact-button{
         font-size: 24px;
         background-color: inherit;
