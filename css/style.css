@@ -212,6 +212,8 @@ h1{
     color: #FFFFFF;
     font-size: 48px;
     font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 .about-bg{
     width: 120px;
