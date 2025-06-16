@@ -824,3 +824,51 @@ box-shadow: inset 5px 5px 10px #bebebe,
 #dashboard{
     margin-bottom: 64px;
 }
+
+/* CAROUSEL ON MAIN PAGE (IMAGE SLIDER | GALLERY) */
+.carousel {
+  width: 500px;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+}
+
+.slides-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 1500px; /* 3 * 500px */
+  transition: transform 0.6s ease-in-out;
+  position: relative;
+  z-index: 99;
+}
+
+.slide {
+  width: 500px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 10px;
+  position: relative;
+  z-index: 99;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}

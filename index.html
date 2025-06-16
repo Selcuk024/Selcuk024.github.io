@@ -7,30 +7,47 @@
     <title>Portfolio | Home</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="I create eye catching websites that work perfectly! Get in contact with me to elevate your online presence." />
-    <meta name="keywords" content="web design, portfolio, web development, eye catching websites, professional websites" />
+    <meta
+      name="description"
+      content="I create eye catching websites that work perfectly! Get in contact with me to elevate your online presence." />
+    <meta
+      name="keywords"
+      content="web design, portfolio, web development, eye catching websites, professional websites" />
     <link rel="canonical" href="https://www.example.com/" />
     <link rel="icon" href="images/home.png" type="image/png" />
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Portfolio | Home" />
-    <meta property="og:description" content="I create eye catching websites that work perfectly! Get in contact with me to elevate your online presence." />
-    <meta property="og:image" content="https://www.example.com/images/logo.png" />
+    <meta
+      property="og:description"
+      content="I create eye catching websites that work perfectly! Get in contact with me to elevate your online presence." />
+    <meta
+      property="og:image"
+      content="https://www.example.com/images/logo.png" />
     <meta property="og:url" content="https://www.example.com/" />
     <meta property="og:type" content="website" />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Portfolio | Home" />
-    <meta name="twitter:description" content="I create eye catching websites that work perfectly! Get in contact with me to elevate your online presence." />
-    <meta name="twitter:image" content="https://www.example.com/images/logo.png" />
+    <meta
+      name="twitter:description"
+      content="I create eye catching websites that work perfectly! Get in contact with me to elevate your online presence." />
+    <meta
+      name="twitter:image"
+      content="https://www.example.com/images/logo.png" />
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/mobile.css" />
     <link href="dist/hamburgers.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -48,81 +65,166 @@
         "description": "I create eye catching websites that not only impress but also perform flawlessly."
       }
     </script>
+    <script src="javascript/BlurGradientBg.min.js"></script>
+    <link rel="stylesheet" href="./css/full-page-scroll.css" />
+    <script src="./javascript/full-page-scroll.js"></script>
+
+    <style>
+      #box {
+        height: 100vh;
+      }
+      #colorbgcanvas {
+        height: 106vh !important;
+        width: 99vw !important;
+      }
+      #UI {
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
 
   <body class="home">
-    <!-- Wrap navigation in a header without changing inner structure -->
-    <header>
-      <canvas></canvas>
+    <div class="scroll-container" id="main">
+      <section class="section1">
+        <header>
+          <canvas></canvas>
 
-      <nav id="navigation">
-        <div class="menu-container2">
-          <div class="menu-container">
-            <a href="index.html" class="nav-buttons">Home</a>
-            <a href="work.html" class="nav-buttons">My Work</a>
-            <a href="about.html" class="nav-buttons"> About Me </a>
-            <a href="contact.html" class="nav-contact-button"> Contact Now</a>
+          <nav id="navigation">
+            <div class="menu-container2">
+              <div class="menu-container">
+                <a href="index.html" class="nav-buttons">Home</a>
+                <a href="work.html" class="nav-buttons">My Work</a>
+                <a href="about.html" class="nav-buttons"> About Me </a>
+                <a href="contact.html" class="nav-contact-button">
+                  Contact Now</a
+                >
+              </div>
+            </div>
+          </nav>
+
+          <nav>
+            <div class="nav-container">
+              <a href="index.html" class="nav-logo">
+                <img
+                  src="images/logo.png"
+                  class="href-logo"
+                  alt="Portfolio Logo" />
+              </a>
+              <div class="nav-container2">
+                <a href="index.html" class="nav-buttons">Home</a>
+                <a href="work.html" class="nav-buttons">My Work</a>
+                <a href="about.html" class="nav-buttons"> About Me </a>
+                <a href="contact.html" class="nav-contact-button">
+                  Contact Now!</a
+                >
+              </div>
+              <a href="javascript:void(0);" onclick="closeopen()">
+                <button class="hamburger hamburger--collapse" type="button">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </button>
+              </a>
+            </div>
+          </nav>
+        </header>
+
+        <main>
+
+          <div class="home-container-main">
+            <div class="home-container">
+              <div class="home-container2">
+                <h1>I create</h1>
+                <h1 class="h1-bg">eye catching</h1>
+              </div>
+              <div class="home-container3">
+                <h1>websites!</h1>
+              </div>
+              <p class="home-text">
+                While the first impression counts,<br />
+                I don’t only create eye catching websites<br />
+                but also one that works perfectly!
+              </p>
+              <a href="contact.html" class="home-big-button">
+                Get in contact with me right now!
+              </a>
+            </div>
+            <div class="home-container">
+              <img
+                src="images/logo.png"
+                class="home-logo"
+                alt="Portfolio Logo" />
+            </div>
+          </div>
+        </main>
+      </section>
+      <section class="section2">
+        <div id="box">
+          <div id="UI">
+            <div class="container">
+              <h1 data-aos="fade-up" data-aos-duration="900" >
+                From vision to reality
+              </h1>
+              <p class="home-text">
+                Ideas. Design. Execution. <br />
+                Explore the work where<br />
+                vision meets precision
+              </p>
+              <a href="work.html" class="home-big-button"> View all my work </a>
+            </div>
+
+            <div class="container">
+              <div class="carousel">
+                <div class="slides-wrapper">
+                  <div class="slides">
+                    <img src="images/macbookBlinq.jpeg" class="slide active" />
+                    <img src="images/macbookStaxxer.jpeg" class="slide" />
+                    <img src="images/App-Image.png" class="slide" />
+                  </div>
+                </div>
+                <div class="dots">
+                  <span class="dot active" onclick="goToSlide(0)"></span>
+                  <span class="dot" onclick="goToSlide(1)"></span>
+                  <span class="dot" onclick="goToSlide(2)"></span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-
-      <nav>
-        <div class="nav-container">
-          <a href="index.html" class="nav-logo">
-            <img src="images/logo.png" class="href-logo" alt="Portfolio Logo" />
-          </a>
-          <div class="nav-container2">
-            <a href="index.html" class="nav-buttons">Home</a>
-            <a href="work.html" class="nav-buttons">My Work</a>
-            <a href="about.html" class="nav-buttons"> About Me </a>
-            <a href="contact.html" class="nav-contact-button"> Contact Now!</a>
-          </div>
-          <a href="javascript:void(0);" onclick="closeopen()">
-            <button class="hamburger hamburger--collapse" type="button">
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-              </span>
-            </button>
-          </a>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Main content wrapped in a semantic <main> tag -->
-    <main>
-      <!-- Background animations -->
-
-      <div class="home-container-main">
-        <div class="home-container">
-          <div class="home-container2">
-            <h1>I create</h1>
-            <h1 class="h1-bg">eye catching</h1>
-          </div>
-          <div class="home-container3">
-            <h1>websites!</h1>
-          </div>
-          <p class="home-text">
-            While the first impression counts,<br />
-            I don’t only create eye catching websites<br />
-            but also one that works perfectly!
-          </p>
-          <a href="contact.html" class="home-big-button">
-            Get in contact with me right now!
-          </a>
-        </div>
-        <div class="home-container">
-          <img src="images/logo.png" class="home-logo" alt="Portfolio Logo" />
-        </div>
-      </div>
-    </main>
-
-    <!-- Footer wrapper added if you wish to include footer content -->
+      </section>
+    </div>
+    <script>
+      let colorbg = new Color4Bg.BlurGradientBg({
+        dom: "box",
+        colors: ["#000000", "#1B1B1B", "#2A1E36", "#3A2152"],
+        loop: true,
+      });
+    </script>
     <footer>
-      <!-- Footer content can be added here -->
     </footer>
 
     <script src="javascript/hamburger-menu.js"></script>
     <script src="javascript/main.js"></script>
+    <script src="javascript/carousel.js"></script>
     <script src="javascript/menu.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+      new fullScroll({
+        mainElement: "main",
+        container: "main",
+        sections: "section",
+        animateTime: 1,
+        animateFunction: "ease",
+      });
+    </script>
   </body>
 </html>
