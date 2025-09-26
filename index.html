@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Home</title>
 
-    <!-- SEO Meta Tags -->
     <meta
       name="description"
       content="I create eye catching websites that work perfectly! Get in contact with me to elevate your online presence." />
@@ -16,7 +15,6 @@
     <link rel="canonical" href="https://www.example.com/" />
     <link rel="icon" href="images/home.png" type="image/png" />
 
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Portfolio | Home" />
     <meta
       property="og:description"
@@ -27,7 +25,6 @@
     <meta property="og:url" content="https://www.example.com/" />
     <meta property="og:type" content="website" />
 
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Portfolio | Home" />
     <meta
@@ -37,7 +34,6 @@
       name="twitter:image"
       content="https://www.example.com/images/logo.png" />
 
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/mobile.css" />
     <link href="dist/hamburgers.css" rel="stylesheet" />
@@ -49,7 +45,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <!-- Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -68,14 +63,17 @@
     <script src="javascript/BlurGradientBg.min.js"></script>
     <link rel="stylesheet" href="./css/full-page-scroll.css" />
     <script src="./javascript/full-page-scroll.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <style>
       #box {
         height: 100vh;
       }
       #colorbgcanvas {
-        height: 106vh !important;
-        width: 99vw !important;
+        height: 100vh !important;
+        width: 100vw !important;
       }
       #UI {
         position: absolute;
@@ -85,6 +83,30 @@
         align-items: center;
         width: 100%;
         height: 100%;
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0%);
+          opacity: 1;
+        }
+      }
+
+      .fadeInUp-animation {
+        animation: 1.5s fadeInUp;
+      }
+      .fade-on-enter {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      .fade-on-enter.is-inview {
+        opacity: 1;
+        transform: translateY(0);
       }
     </style>
   </head>
@@ -136,7 +158,6 @@
         </header>
 
         <main>
-
           <div class="home-container-main">
             <div class="home-container">
               <div class="home-container2">
@@ -168,9 +189,7 @@
         <div id="box">
           <div id="UI">
             <div class="container">
-              <h1 data-aos="fade-up" data-aos-duration="900" >
-                From vision to reality
-              </h1>
+              <h1 class="fade-on-enter">From vision to reality</h1>
               <p class="home-text">
                 Ideas. Design. Execution. <br />
                 Explore the work where<br />
@@ -206,8 +225,7 @@
         loop: true,
       });
     </script>
-    <footer>
-    </footer>
+    <footer></footer>
 
     <script src="javascript/hamburger-menu.js"></script>
     <script src="javascript/main.js"></script>
@@ -225,6 +243,34 @@
         animateTime: 1,
         animateFunction: "ease",
       });
+    </script>
+    <script>
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const el = entry.target;
+            if (entry.isIntersecting) {
+              el.classList.add(
+                "is-inview",
+                "animate__animated",
+                "animate__fadeInUp"
+              );
+              el.style.setProperty("--animate-duration", "0.9s"); // optional
+            } else {
+              el.classList.remove(
+                "is-inview",
+                "animate__animated",
+                "animate__fadeInUp"
+              );
+            }
+          });
+        },
+        { threshold: 0.45 }
+      );
+
+      document
+        .querySelectorAll(".fade-on-enter")
+        .forEach((el) => io.observe(el));
     </script>
   </body>
 </html>
