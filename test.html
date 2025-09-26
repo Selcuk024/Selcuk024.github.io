@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Contact</title>
+    <link rel="icon" href="images/mail.png" type="image/icon">
+
+    <link href="dist/hamburgers.css" rel="stylesheet">
+    <style>
+        body {
+  background: #000;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.timeline {
+  width: 80%;
+  margin: auto;
+  padding: 100px 0;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 100px 0;
+  position: relative;
+}
+
+.text {
+  width: 30%;
+}
+
+.line-container {
+  width: 40%;
+  height: 4px;
+  background: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.line {
+  width: 0;
+  height: 4px;
+  background: #d6ff00;
+  transition: width 1s ease-out;
+}
+
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+</head>
+<body>
+    <h1>hi</h1>
+<div class="timeline">
+  <div class="event" id="event1">
+    <div class="text left">2022<br>Begin a study of Software Development</div>
+    <div class="line-container">
+      <div class="line"></div>
+    </div>
+    <div class="text right">ROC Nijmegen</div>
+  </div>
+  <!-- Repeat for other events -->
+</div>
+
+    <script>
+        const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelector('.line').style.width = '100%';
+    }
+  });
+}, {
+  threshold: 0.5
+});
+
+document.querySelectorAll('.event').forEach(event => {
+  observer.observe(event);
+});
+
+    </script>
+</body>
+</html>
