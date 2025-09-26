@@ -249,21 +249,20 @@
     }
     .mobile-app-image{
         width: 100%;
-        margin-top: 36px;
+        margin-bottom: 24px;
     }
     .game-image{
-        width: 70%;
-        margin-top: 42px;
+        width: 75%;
     }
     .mb-bg{
         font-size: 20px;
         width: 13rem;
         padding-bottom: 8px;
         padding-top: 8px;
+        margin-top: 56px;
     }
     .work-container3{
         height: auto;
-        margin-top: 0px;
     }
     .yellow-bg{
         font-size: 26px;
